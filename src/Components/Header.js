@@ -5,7 +5,8 @@ import Name from "./Name";
 export default function Header() {
     const [fullName, setFullName] = React.useState({
        firstName: "",
-       lastName: ""
+       lastName: "",
+       previewDisplay: false
     })
 
     function handleChange(event){
@@ -19,13 +20,19 @@ export default function Header() {
     }
 
     function handleSubmit(event) {
-        event.preventDefault()
-        
+        event.preventDefault();
+        setFullName(prevFullName => ({
+            ...prevFullName,
+            previewDisplay: true
+        }))
     }
     
+
+
         return (
+            
             <div id="header">
-                <form className="form" onSubmit={handleSubmit}>
+                {!fullName.previewDisplay && <form className="form" onSubmit={handleSubmit}>
                    <input
                         type="text"
                         placeholder="First Name"
@@ -41,10 +48,10 @@ export default function Header() {
                         value={fullName.lastName}
                     />
                     <button className="form-submit">Update</button>
-                </form>
-                <Name fullName={fullName}/>
+                </form>}
+                {fullName.previewDisplay && <Name fullName={fullName}/>}
             </div>
-        )
+        );
     
 
 }
