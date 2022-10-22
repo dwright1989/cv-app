@@ -1,0 +1,46 @@
+* {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+#header{
+    border: 4px solid #00002A;
+    width: 30vw;
+    min-width: 290px;
+    margin: 2rem auto;
+    display:flex;
+    overflow: hidden;
+    height: 20vh;
+}
+
+#fullName{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#fullNameDiv{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+#editButton{
+    width: 6vw;
+    justify-self: end;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: auto;
+    gap: 0.5rem;
+}
+
+
+

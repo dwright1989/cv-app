@@ -4,9 +4,9 @@ import Name from "./Name";
 
 export default function Header() {
     const [fullName, setFullName] = React.useState({
-       firstName: "",
-       lastName: "",
-       previewDisplay: false
+       firstName: "Joe",
+       lastName: "Bloggs",
+       previewDisplay: true
     })
 
     function handleChange(event){
@@ -15,8 +15,6 @@ export default function Header() {
             ...prevFullName,
             [name]: value
         }))
-
-        
     }
 
     function handleSubmit(event) {
@@ -27,29 +25,39 @@ export default function Header() {
         }))
     }
     
+    function handleEdit(){
+        setFullName(prevFullName => ({
+            ...prevFullName,
+            previewDisplay: false
+        }))
+    }
 
 
         return (
             
             <div id="header">
                 {!fullName.previewDisplay && <form className="form" onSubmit={handleSubmit}>
-                   <input
+                   First name: <input
                         type="text"
                         placeholder="First Name"
                         name="firstName"
                         onChange={handleChange}
                         value={fullName.firstName}
                     />
-                    <input
+                    Last name: <input
                         type="text"
                         placeholder="Last Name"
                         name="lastName"
                         onChange={handleChange}
                         value={fullName.lastName}
                     />
-                    <button className="form-submit">Update</button>
+                    <button className="form-submit" id="updateButton">Update</button>
                 </form>}
-                {fullName.previewDisplay && <Name fullName={fullName}/>}
+                {fullName.previewDisplay && 
+                        <div id="fullNameDiv">
+                                <button  id="editButton" onClick={handleEdit}>Edit</button> 
+                                <Name fullName={fullName} /> 
+                        </div>}
             </div>
         );
     
