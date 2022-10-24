@@ -36,7 +36,7 @@ export default function Header() {
         return (
             
             <div id="header">
-                {!fullName.previewDisplay && <form className="form" onSubmit={handleSubmit}>
+                {!fullName.previewDisplay && <form id="nameForm" className ="form" onSubmit={handleSubmit}>
                    First name: <input
                         type="text"
                         placeholder="First Name"
@@ -51,11 +51,11 @@ export default function Header() {
                         onChange={handleChange}
                         value={fullName.lastName}
                     />
-                    <button className="form-submit" id="updateButton">Update</button>
+                    <button className="form-submit updateButton">Update</button>
                 </form>}
                 {fullName.previewDisplay && 
                         <div id="fullNameDiv">
-                                <button  id="editButton" onClick={handleEdit}>Edit</button> 
+                                <button  className="editButton" onClick={handleEdit}>Edit</button> 
                                 <Name fullName={fullName} /> 
                         </div>}
             </div>

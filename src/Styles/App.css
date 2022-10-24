@@ -19,10 +19,7 @@
     border: 3px solid var(--secondary-color);
 }
 
-#leftPanel{
-    background-color: var(--tertiary-color);
-    height: 100vh;
-}
+
 
 #rightPanel{
     background-color:var(--main-color);
@@ -53,12 +50,12 @@
 #fullNameDiv{
     display: grid;
     grid-template-rows: 20% 80%;
-    font-size: 3rem;
+    font-size: 4vw;
     width: 100%;
     margin-bottom: 1rem;
 }
 
-#editButton{
+.editButton{
     width: 6vw;
     justify-self: end;
 }
@@ -71,4 +68,40 @@
 }
 
 
+/*##########*/
+/*LEFT PANEL*/
+/*##########*/
+#leftPanel{
+    background-color: var(--tertiary-color);
+    height: 100vh;
+}
+
+/*DETAILS*/
+#details{
+    padding: 27vh 2vw 0vw 2vw;
+    font-size: 1.2vw;
+}
+
+#detailsDiv{
+    display: grid;
+    justify-content: center;
+}
+
+#detailsHeading{
+    grid-column: 1/2;
+}
+
+#editDetailsButton{
+    grid-column: 2/3;
+    height: 2vw;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#editPhoneField, #editEmailField{
+    margin-top: 0.5vw;
+    max-height: 1.5vw;
+}
 
