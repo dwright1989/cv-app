@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Details() {
     const [details, setDetails] = React.useState({
-       address: "123 Example Avenue",
-       phone: "0123476789",
-       email: "example@example.com",
+       address: "",
+       phone: "",
+       email: "",
        previewDisplay: true
     })
 
@@ -32,6 +32,7 @@ export default function Details() {
             previewDisplay: false
         }))
     }
+
 
 
         return (
@@ -65,11 +66,11 @@ export default function Details() {
                                     <button  className="editButton" id="editDetailsButton" onClick={handleEdit}>Edit</button>  
                                 </div>
                                 <p className="bold" id="addressHeading">ADDRESS</p>
-                                <p id="address">{details.address}</p>
+                                <p id="address">{(details.address) ?  details.address : "123 Example Avenue"}</p>
                                 <p className="bold" id="phoneHeading">PHONE NUMBER</p>
-                                <p id="phone">{details.phone}</p>
+                                <p id="phone">{(details.phone) ? details.phone : "012347678"}</p>
                                 <p className="bold" id="emailHeading">EMAIL ADDRESS</p>
-                                <p id="email">{details.email}</p>
+                                <p id="email">{(details.email)? details.email : "example@email.com"}</p>
                                 
                         </div>}
             </div>

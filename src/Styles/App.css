@@ -18,7 +18,7 @@
 
 #content{
     display:grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 25% 75%;
     width: 70%;
     margin: auto;
     border: 3px solid var(--secondary-color);
@@ -79,7 +79,7 @@
 
 /*DETAILS*/
 #details{
-    padding: 27vh 2vw 0vw 2vw;
+    padding: 4vh 2vw 0vw 2vw;
     font-size: 1vw;
 }
 
@@ -100,4 +100,28 @@
 #editDetailsButton{
     height: 1vw;
     width: 2vw;
+}
+
+
+.social-icon{
+    width: 2vw;
+    padding: 0px 2px;
+}
+
+#editSocialsButton{
+    float: right;
+}
+
+.socialLinks{
+    display: flex;
+}
+
+#socialsDiv{
+    padding: 1vw;
+    overflow:hidden;
+    clear: both;
+}
+
+#socialLinksDiv{
+    padding-top: 4vw;
 }
