@@ -60,13 +60,15 @@ export default function Details() {
                 </form>}
                 {details.previewDisplay && 
                         <div id="detailsDiv">
-                                <h2 id="detailsHeading">Details</h2>
-                                <button  className="editButton" id="editDetailsButton" onClick={handleEdit}>Edit</button> 
-                                <p className="bold" id="addressHeading">Address</p>
+                                <div id="detailsHeadingDiv">
+                                    <h2 id="detailsHeading">DETAILS</h2>
+                                    <button  className="editButton" id="editDetailsButton" onClick={handleEdit}>Edit</button>  
+                                </div>
+                                <p className="bold" id="addressHeading">ADDRESS</p>
                                 <p id="address">{details.address}</p>
-                                <p className="bold" id="phoneHeading">Phone Number</p>
+                                <p className="bold" id="phoneHeading">PHONE NUMBER</p>
                                 <p id="phone">{details.phone}</p>
-                                <p className="bold" id="emailHeading">Email Address</p>
+                                <p className="bold" id="emailHeading">EMAIL ADDRESS</p>
                                 <p id="email">{details.email}</p>
                                 
                         </div>}

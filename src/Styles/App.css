@@ -1,8 +1,13 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
+
 * {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
+    font-family: 'Source Serif Pro', serif;
 }
 
 :root{
@@ -28,17 +33,13 @@
 
 /*HEADER*/
 
-#header{
-    border: 4px solid var(--secondary-color);
-    background-color: var(--main-color);
+#header {
     width: 30vw;
-    min-width: 290px;
     margin: 2rem auto;
-    display:flex;
+    display: flex;
     overflow: hidden;
-    height: 20vh;
     position: absolute;
-    left: 0;
+    left: 30vw;
     right: 0;
 }
 
@@ -79,25 +80,16 @@
 /*DETAILS*/
 #details{
     padding: 27vh 2vw 0vw 2vw;
-    font-size: 1.2vw;
-}
-
-#detailsDiv{
-    display: grid;
-    justify-content: center;
-}
-
-#detailsHeading{
-    grid-column: 1/2;
-}
-
-#editDetailsButton{
-    grid-column: 2/3;
-    height: 2vw;
+    font-size: 1vw;
 }
 
 .bold{
     font-weight: bold;
+}
+
+#detailsHeadingDiv{
+    display: flex;
+    justify-content: space-between;
 }
 
 #editPhoneField, #editEmailField{
@@ -105,3 +97,7 @@
     max-height: 1.5vw;
 }
 
+#editDetailsButton{
+    height: 1vw;
+    width: 2vw;
+}
