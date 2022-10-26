@@ -78,25 +78,25 @@ export default function Socials() {
                                     {socials.linkedIn && 
                                     <div className="socialLinks">
                                         <a href={socials.linkedIn}><img src={linkedInLogo} alt="Linked In" className="social-icon"/></a>
-                                        <p>{socials.linkedIn}</p>
+                                        <p className="url">{socials.linkedIn}</p>
                                     </div>
                                     }
                                     {socials.facebook && 
                                     <div className="socialLinks">
                                         <a href={socials.facebook}><img src={facebookLogo} alt="Facebook" className="social-icon"/></a>
-                                        <p>{socials.facebook}</p>
+                                        <p className="url">{socials.facebook}</p>
                                         </div>
                                     }
                                     {socials.instagram && 
                                     <div className="socialLinks">
                                         <a href={socials.instagram}><img src={instagramLogo} alt="Instagram" className="social-icon"/></a>
-                                        <p>{socials.instagram}</p>
+                                        <p className="url">{socials.instagram}</p>
                                     </div>
                                     }
                                     {socials.gitHub && 
                                     <div className="socialLinks">
                                         <a href={socials.gitHub}><img src={gitHubLogo} alt="GitHub" className="social-icon"/></a>
-                                        <p>{socials.gitHub}</p>
+                                        <p className="url">{socials.gitHub}</p>
 
                                     </div>
                                     }

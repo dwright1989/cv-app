@@ -111,14 +111,20 @@
 
 .socialLinks{
     display: flex;
+    gap: 1vw;
 }
 
 #socialsDiv{
     padding: 4vh 2vw 0vw 2vw;
     overflow:hidden;
     clear: both;
+    font-size: 1vw;
 }
 
 #socialLinksDiv{
     padding-top: 4vw;
+}
+
+.url{
+    padding-top: 0.5vh;
 }
