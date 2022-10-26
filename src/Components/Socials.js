@@ -73,7 +73,11 @@ export default function Socials() {
                 </form>}
                 {socials.previewDisplay && 
                         <div id="socialsDiv">
-                                <img src={editIcon} alt="Edit" className="editButton" id="editSocialsButton" onClick={handleEdit}/>
+                                <div id="socialsHeadingDiv">
+                                    <h2 id="socialsHeading">SOCIALS</h2>
+                                    <img src={editIcon} alt="Edit" className="editButton" id="editSocialsButton" onClick={handleEdit}/>
+                                </div>
+                                
                                 <div id="socialLinksDiv">
                                     {socials.linkedIn && 
                                     <div className="socialLinks">

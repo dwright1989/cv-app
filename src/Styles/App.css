@@ -99,6 +99,9 @@
     max-height: 1.5vw;
 }
 
+
+/*SOCIALS*/
+
 .social-icon{
     width: 2vw;
     padding: 0px 2px;
@@ -136,4 +139,57 @@
 
 .socialsFormItem{
     margin-left: 0.5vw;
+}
+
+#socialsHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*SKILLS*/
+#skills{
+    padding: 4vh 2vw 0vw 2vw;
+    font-size: 1vw;
+}
+
+.addButton{
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+    justify-self: end;
+    padding-top:0.2vw;
+}
+
+#skillsHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#skillItems{
+    display: grid;
+}
+
+#skillItems > ul{
+    list-style: none;
+}
+
+#skillItems>ul>li{
+    display: flex;
+    justify-content: space-between;
+}
+
+#skillInput{
+    width: 8vw;
+}
+#addSkillItemButton{
+    width: 5vw;
+    height: auto;
+}
+
+.deleteButton{
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+    padding-top:0.2vw;
 }

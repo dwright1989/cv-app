@@ -1,6 +1,7 @@
 import React from "react";
 import Details from "./Details";
 import Socials from "./Socials";
+import Skills from "./Skills";
 
 
 const LeftPanel = () => {
@@ -8,6 +9,7 @@ const LeftPanel = () => {
     <div id="leftPanel">
         <Socials />
         <Details />
+        <Skills />
     </div>
   );
 };
