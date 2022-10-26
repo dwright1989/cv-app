@@ -14,14 +14,16 @@
     --main-color: white;
     --secondary-color: #00002A;
     --tertiary-color: #7393B3;
+    --additional-color: #dddddd;
+    background-color: var(--additional-color);
 }
 
 #content{
     display:grid;
     grid-template-columns: 25% 75%;
     width: 70%;
-    margin: auto;
-    border: 3px solid var(--secondary-color);
+    margin: 6vw auto;
+    border: 1px solid var(--secondary-color);
 }
 
 
@@ -54,6 +56,7 @@
 #leftPanel{
     background-color: var(--tertiary-color);
     min-height: 100vh;
+    color: var(--main-color);
 }
 
 /*HEADER*/
@@ -63,6 +66,7 @@
     margin: 2rem auto;
     display: flex;
     overflow: hidden;
+    
 }
 
 #fullName{
@@ -72,8 +76,8 @@
 #fullNameDiv{
     display: grid;
     grid-template-rows: 20% 80%;
-    font-size: 4vw;
     width: 100%;
+    font-size: 4vw;
 }
 
 
@@ -245,4 +249,64 @@
 hr{
     width: 45vw;
     margin: 1vw 0 0 1vw;
+}
+
+/*
+MEDIA QUERIES FOR MOBILE DEVICES 
+*/
+
+
+@media only screen and (max-width:700px){ 
+
+    #leftPanel, #rightPanel{
+        min-height: 100px;
+    }
+
+    #nameForm{
+        font-size: 2vw;
+    }
+
+    input{
+        width: 20vw;
+        height: 2vw;
+        font-size: 2vw;
+    }
+
+    #header{
+        width: 90%;
+    }
+
+    .updateButton{
+        height: 3vw;
+        font-size: 2vw;
+        width: 8vw;
+    }
+
+    #socialsForm>input, #detailsForm>input, #skillsForm>input{
+        width: 7vw;
+        height: 1vw;
+    }
+
+    #skillsForm{
+        gap:0;
+    }
+
+    #addSkillItemButton{
+        width: 3vw;
+        height: auto;
+        font-size: 1vw;
+    }
+
+    #introForm{
+        padding: 1rem;
+    }
+
+    #updateInfoButton, #addEducationItemButton, #addExperienceItemButton {
+        font-size: 1vw;
+    }
+
+    #editResponsibilityField{
+        margin-right: 1rem;
+    }
+
 }
