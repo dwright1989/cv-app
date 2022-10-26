@@ -29,6 +29,10 @@
     text-decoration: underline;
 }
 
+.italics{
+    font-style: italic;
+}
+
 
 .form{
     display: grid;
@@ -49,7 +53,7 @@
 /*##########*/
 #leftPanel{
     background-color: var(--tertiary-color);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /*HEADER*/
@@ -191,14 +195,14 @@
 
 #rightPanel{
     background-color:var(--main-color);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
 /*INTRO*/
 
-#intro{
-    padding: 0 2vw;
+#intro, #educations{
+    padding: 0 2vw 4vw 2vw;
     font-size: 1.3vw;
 }
 
@@ -216,3 +220,29 @@
     height: 7vw;
 }
 
+/*EDUCATIONS*/
+
+#educationsHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#addEducationItemButton{
+    width: 3vw;
+    height: auto;
+}
+
+.educationItemDiv{
+    display:grid;
+    grid-template-columns: 30% 60% 10%;
+    padding-bottom: 2vw;
+}
+
+.edItem{
+    grid-column: 2/4;
+}
+
+hr{
+    width: 45vw;
+    margin: 1vw 0 0 1vw;
+}
