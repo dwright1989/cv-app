@@ -25,9 +25,30 @@
 }
 
 
+.underline{
+    text-decoration: underline;
+}
 
-#rightPanel{
-    background-color:var(--main-color);
+
+.form{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: auto;
+    gap: 0.5rem;
+}
+
+.editButton{
+    cursor: pointer;
+    width: 1.5vw;
+    height: 1.5vw;
+    justify-self: end;
+}
+
+/*##########*/
+/*LEFT PANEL*/
+/*##########*/
+#leftPanel{
+    background-color: var(--tertiary-color);
     height: 100vh;
 }
 
@@ -38,13 +59,9 @@
     margin: 2rem auto;
     display: flex;
     overflow: hidden;
-    position: absolute;
-    left: 30vw;
-    right: 0;
 }
 
 #fullName{
-    margin-top: 2rem;
     text-align: center;
 }
 
@@ -53,31 +70,9 @@
     grid-template-rows: 20% 80%;
     font-size: 4vw;
     width: 100%;
-    margin-bottom: 1rem;
-}
-
-.editButton{
-    cursor: pointer;
-    width: 1.5vw;
-    height: 1.5vw;
-    justify-self: end;
-}
-
-.form{
-    display: grid;
-    grid-template-columns: 30% 70%;
-    margin: auto;
-    gap: 0.5rem;
 }
 
 
-/*##########*/
-/*LEFT PANEL*/
-/*##########*/
-#leftPanel{
-    background-color: var(--tertiary-color);
-    height: 100vh;
-}
 
 /*DETAILS*/
 #details{
@@ -126,10 +121,6 @@
     overflow:hidden;
     clear: both;
     
-}
-
-#socialLinksDiv{
-    padding-top: 4vw;
 }
 
 .url{
@@ -193,3 +184,35 @@
     cursor: pointer;
     padding-top:0.2vw;
 }
+
+/*##########*/
+/*RIGHT PANEL*/
+/*##########*/
+
+#rightPanel{
+    background-color:var(--main-color);
+    height: 100vh;
+}
+
+
+/*INTRO*/
+
+#intro{
+    padding: 0 2vw;
+    font-size: 1.3vw;
+}
+
+#introHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#updateInfoButton{
+    width: 5vw;
+    height: auto;
+}
+
+#descriptionTextArea{
+    height: 7vw;
+}
+
