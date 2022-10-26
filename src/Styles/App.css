@@ -201,7 +201,7 @@
 
 /*INTRO*/
 
-#intro, #educations{
+#intro, #educations, #experiences{
     padding: 0 2vw 4vw 2vw;
     font-size: 1.3vw;
 }
@@ -216,29 +216,29 @@
     height: auto;
 }
 
-#descriptionTextArea{
+#descriptionTextArea, #editResponsibilityField{
     height: 7vw;
 }
 
-/*EDUCATIONS*/
+/*EDUCATIONS and EXPERIENCES*/
 
-#educationsHeadingDiv{
+#educationsHeadingDiv, #experiencesHeadingDiv{
     display: flex;
     justify-content: space-between;
 }
 
-#addEducationItemButton{
+#addEducationItemButton, #addExperienceItemButton{
     width: 3vw;
     height: auto;
 }
 
-.educationItemDiv{
+.educationItemDiv, .experienceItemDiv{
     display:grid;
     grid-template-columns: 30% 60% 10%;
     padding-bottom: 2vw;
 }
 
-.edItem{
+.edItem, .workItem{
     grid-column: 2/4;
 }
 

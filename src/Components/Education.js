@@ -45,7 +45,6 @@ export default function Education() {
 
     function handleChange(event){
         const{name, value} = event.target;
-        console.log("changing: " + [name] + " to " + value);
         setEducation(prevEducation => ({
             ...prevEducation,
             ed:{
@@ -72,8 +71,6 @@ export default function Education() {
                 </div>
                 {education.educations && 
                     <div id="educationItems">
-                        
-                            {console.log(JSON.stringify(education))}
                             {education.educations.map((ed)=>{
                                 return <div className="educationItemDiv" key={ed.id}>{
                                 }<p>School: </p><p className="italics">{ed.school}</p>
@@ -93,25 +90,25 @@ export default function Education() {
                                 type="text"
                                 name="school"
                                 onChange={handleChange}
-                                value={education.ed.school}
+                                value={education.ed.school} required
                             />
                             Qualification: <input id="editQualificationField"
                                 type="text"
                                 name="qualification"
                                 onChange={handleChange}
-                                value={education.ed.qualification}
+                                value={education.ed.qualification} required
                             />
                             Grade: <input id="editGradeField"
                                 type="text"
                                 name="grade"
                                 onChange={handleChange}
-                                value={education.ed.grade}
+                                value={education.ed.grade} required
                             />
                              Year Achieved: <input id="editYearField"
                                 type="date"
                                 name="dateAchieved"
                                 onChange={handleChange}
-                                value={education.ed.dateAchieved}
+                                value={education.ed.dateAchieved} required
                             />
                             <button className="form-submit" id="addEducationItemButton">Add</button>
                         </form>
