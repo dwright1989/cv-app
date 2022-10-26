@@ -114,11 +114,15 @@
     gap: 1vw;
 }
 
-#socialsDiv{
+#socials{
     padding: 4vh 2vw 0vw 2vw;
+    font-size: 1vw;
+}
+
+#socialsDiv{
     overflow:hidden;
     clear: both;
-    font-size: 1vw;
+    
 }
 
 #socialLinksDiv{
@@ -127,4 +131,9 @@
 
 .url{
     padding-top: 0.5vh;
+}
+
+
+.socialsFormItem{
+    margin-left: 0.5vw;
 }

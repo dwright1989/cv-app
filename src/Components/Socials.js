@@ -45,25 +45,25 @@ export default function Socials() {
             
             <div id="socials">
                 {!socials.previewDisplay && <form id="socialsForm" className ="form" onSubmit={handleSubmit}>
-                   LinkedIn: <input id="editLinkedInField"
+                   LinkedIn: <input id="editLinkedInField" className="socialsFormItem"
                         type="text"
                         name="linkedIn"
                         onChange={handleChange}
                         value={socials.linkedIn}
                     />
-                    Facebook: <input id="editFacebookField"
+                    Facebook: <input id="editFacebookField" className="socialsFormItem"
                         type="text"
                         name="facebook"
                         onChange={handleChange}
                         value={socials.facebook}
                     />
-                     Instagram: <input id="editInstagramField"
+                     Instagram: <input id="editInstagramField" className="socialsFormItem"
                         type="text"
                         name="instagram"
                         onChange={handleChange}
                         value={socials.instagram}
                     />
-                    GitHub: <input id="editGitHubField"
+                    GitHub: <input id="editGitHubField" className="socialsFormItem"
                         type="text"
                         name="gitHub"
                         onChange={handleChange}
