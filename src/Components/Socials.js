@@ -4,6 +4,7 @@ import linkedInLogo from '../Icons/linkedin.png';
 import facebookLogo from '../Icons/facebook.png';
 import instagramLogo from '../Icons/instagram.png';
 import gitHubLogo from '../Icons/github.png';
+import editIcon from '../Icons/edit.png';
 
 
 export default function Socials() {
@@ -72,7 +73,7 @@ export default function Socials() {
                 </form>}
                 {socials.previewDisplay && 
                         <div id="socialsDiv">
-                                <button  className="editButton" id="editSocialsButton" onClick={handleEdit}>Edit</button>  
+                                <img src={editIcon} alt="Edit" className="editButton" id="editSocialsButton" onClick={handleEdit}/>
                                 <div id="socialLinksDiv">
                                     {socials.linkedIn && 
                                     <div className="socialLinks">

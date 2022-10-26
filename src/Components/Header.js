@@ -1,6 +1,7 @@
 
 import React from "react";
 import Name from "./Name";
+import editIcon from '../Icons/edit.png';
 
 export default function Header() {
     const [fullName, setFullName] = React.useState({
@@ -55,7 +56,7 @@ export default function Header() {
                 </form>}
                 {fullName.previewDisplay && 
                         <div id="fullNameDiv">
-                                <button  className="editButton" onClick={handleEdit}>Edit</button> 
+                                <img src={editIcon} alt="Edit" className="editButton" id="editHeaderButton" onClick={handleEdit}/>
                                 <Name fullName={fullName} /> 
                         </div>}
             </div>

@@ -1,5 +1,6 @@
 
 import React from "react";
+import editIcon from '../Icons/edit.png';
 
 
 export default function Details() {
@@ -63,7 +64,7 @@ export default function Details() {
                         <div id="detailsDiv">
                                 <div id="detailsHeadingDiv">
                                     <h2 id="detailsHeading">DETAILS</h2>
-                                    <button  className="editButton" id="editDetailsButton" onClick={handleEdit}>Edit</button>  
+                                    <img src={editIcon} alt="Edit" className="editButton" id="editDetailsButton" onClick={handleEdit}/>
                                 </div>
                                 <p className="bold" id="addressHeading">ADDRESS</p>
                                 <p id="address">{(details.address) ?  details.address : "123 Example Avenue"}</p>
