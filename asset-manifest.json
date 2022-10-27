@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cv-app/static/css/main.76c0cb93.css",
+    "main.js": "/cv-app/static/js/main.a07d494e.js",
+    "static/media/instagram.png": "/cv-app/static/media/instagram.ac32ec0a111aeba03298.png",
+    "static/media/linkedin.png": "/cv-app/static/media/linkedin.032cf8a63be2f0f4d425.png",
+    "static/media/facebook.png": "/cv-app/static/media/facebook.8d51a55626e9bf107f8f.png",
+    "index.html": "/cv-app/index.html",
+    "main.76c0cb93.css.map": "/cv-app/static/css/main.76c0cb93.css.map",
+    "main.a07d494e.js.map": "/cv-app/static/js/main.a07d494e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76c0cb93.css",
+    "static/js/main.a07d494e.js"
+  ]
+}
