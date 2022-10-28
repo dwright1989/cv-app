@@ -59,7 +59,7 @@ export default function Skills(props) {
                     <div id="skillItems">
                         <ul>
                             {skills.skills.map((skill)=>{
-                                return <li key={skill.id}>{skill.text} <img src={deleteIcon} alt="Delete" className="deleteButton" id={skill.id} onClick={handleDelete}/></li>
+                                return <li key={skill.id}>{skill.text} {!props.preview && <img src={deleteIcon} alt="Delete" className="deleteButton" id={skill.id} onClick={handleDelete}/>}</li>
                                 
                             })}
                         </ul>

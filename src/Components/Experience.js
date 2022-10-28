@@ -76,7 +76,8 @@ export default function Experience(props) {
                             {experience.experiences.map((work)=>{
                                 return <div className="experienceItemDiv" key={work.id}>{
                                 }<p>Company: </p><p className="italics">{work.company}</p>
-                                 <img src={deleteIcon} alt="Delete" className="deleteButton" id={work.id} onClick={handleDelete}/>
+                                {!props.preview &&  <img src={deleteIcon} alt="Delete" className="deleteButton" id={work.id} onClick={handleDelete}/>}
+                                {props.preview && <p></p>}
                                 <p>Title: </p><p className="workItem italics">{work.title}</p>
                                 <p>Date from: </p><p className="workItem italics">{work.dateFrom}</p>
                                 <p>Date to: </p><p className="workItem italics">{work.dateTo}</p>

@@ -74,7 +74,8 @@ export default function Education(props) {
                             {education.educations.map((ed)=>{
                                 return <div className="educationItemDiv" key={ed.id}>{
                                 }<p>School: </p><p className="italics">{ed.school}</p>
-                                 <img src={deleteIcon} alt="Delete" className="deleteButton" id={ed.id} onClick={handleDelete}/>
+                                {!props.preview &&  <img src={deleteIcon} alt="Delete" className="deleteButton" id={ed.id} onClick={handleDelete}/>}
+                                {props.preview && <p></p>}
                                 <p>Qualification: </p><p className="edItem italics">{ed.qualification}</p>
                                 <p>Grade: </p><p className="edItem italics">{ed.grade}</p>
                                 <p>Date Achieved: </p><p className="edItem italics">{ed.dateAchieved}</p>
