@@ -50,6 +50,7 @@
     width: 70%;
     margin: 1vw auto;
     border: 1px solid var(--secondary-color);
+    min-height: 250vh;
 }
 
 
