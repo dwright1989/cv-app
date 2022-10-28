@@ -1,4 +1,3 @@
-
 import React from "react";
 import uniqid from "uniqid";
 import addIcon from '../Icons/add.png';
@@ -6,7 +5,7 @@ import deleteIcon from '../Icons/delete.png';
 
 
 
-export default function Skills() {
+export default function Skills(props) {
     const [skills, setSkills] = React.useState({
         skill: {text: "", id: uniqid()},
         skills: [],
@@ -54,9 +53,9 @@ export default function Skills() {
             <div id="skills">
                 <div id="skillsHeadingDiv">
                     <h2>SKILLS</h2>
-                    <img src={addIcon} alt="Add" className="addButton" id="addSkillButton" onClick={handleAdd}/>
+                    {!props.preview && <img src={addIcon} alt="Add" className="addButton" id="addSkillButton" onClick={handleAdd}/>}
                 </div>
-                {skills.skills && 
+                {(skills.skills || props.preview) && 
                     <div id="skillItems">
                         <ul>
                             {skills.skills.map((skill)=>{
@@ -66,7 +65,7 @@ export default function Skills() {
                         </ul>
                     </div>
                 }
-                {!skills.previewDisplay && 
+                {(!skills.previewDisplay && !props.preview) &&
                         <form id="skillsForm" className ="form" onSubmit={handleSubmit}>
                             <input id="skillInput"
                                 type="text"

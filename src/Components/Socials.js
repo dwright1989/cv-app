@@ -7,7 +7,7 @@ import gitHubLogo from '../Icons/github.png';
 import editIcon from '../Icons/edit.png';
 
 
-export default function Socials() {
+export default function Socials(props) {
     const [socials, setSocials] = React.useState({
        linkedIn: "",
        facebook: "",
@@ -44,7 +44,7 @@ export default function Socials() {
         return (
             
             <div id="socials">
-                {!socials.previewDisplay && <form id="socialsForm" className ="form" onSubmit={handleSubmit}>
+                {(!socials.previewDisplay && !props.preview) && <form id="socialsForm" className ="form" onSubmit={handleSubmit}>
                    LinkedIn: <input id="editLinkedInField" className="socialsFormItem"
                         type="text"
                         name="linkedIn"
@@ -71,11 +71,11 @@ export default function Socials() {
                     />
                     <button className="form-submit updateButton">Update</button>
                 </form>}
-                {socials.previewDisplay && 
+                {(socials.previewDisplay || props.preview ) &&
                         <div id="socialsDiv">
                                 <div id="socialsHeadingDiv">
                                     <h2 id="socialsHeading">SOCIALS</h2>
-                                    <img src={editIcon} alt="Edit" className="editButton" id="editSocialsButton" onClick={handleEdit}/>
+                                    {!props.preview && <img src={editIcon} alt="Edit" className="editButton" id="editSocialsButton" onClick={handleEdit}/>}
                                 </div>
                                 
                                 <div id="socialLinksDiv">

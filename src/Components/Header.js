@@ -3,7 +3,7 @@ import React from "react";
 import Name from "./Name";
 import editIcon from '../Icons/edit.png';
 
-export default function Header() {
+export default function Header(props) {
     const [fullName, setFullName] = React.useState({
        firstName: "Joe",
        lastName: "Bloggs",
@@ -37,7 +37,7 @@ export default function Header() {
         return (
             
             <div id="header">
-                {!fullName.previewDisplay && <form id="nameForm" className ="form" onSubmit={handleSubmit}>
+                {(!fullName.previewDisplay && !props.preview) && <form id="nameForm" className ="form" onSubmit={handleSubmit}>
                    First name: <input
                         type="text"
                         placeholder="First Name"
@@ -54,10 +54,11 @@ export default function Header() {
                     />
                     <button className="form-submit updateButton">Update</button>
                 </form>}
-                {fullName.previewDisplay && 
+                {(fullName.previewDisplay || props.preview) &&
                         <div id="fullNameDiv">
-                                <img src={editIcon} alt="Edit" className="editButton" id="editHeaderButton" onClick={handleEdit}/>
-                                <Name fullName={fullName} /> 
+                            {!props.preview &&
+                                <img src={editIcon} alt="Edit" className="editButton" id="editHeaderButton" onClick={handleEdit}/>}
+                                <Name fullName={fullName}/> 
                         </div>}
             </div>
         );

@@ -3,7 +3,7 @@ import React from "react";
 import editIcon from '../Icons/edit.png';
 
 
-export default function Details() {
+export default function Details(props) {
     const [details, setDetails] = React.useState({
        address: "",
        phone: "",
@@ -39,7 +39,7 @@ export default function Details() {
         return (
             
             <div id="details">
-                {!details.previewDisplay && <form id="detailsForm" className ="form" onSubmit={handleSubmit}>
+                {(!details.previewDisplay && !props.preview) && <form id="detailsForm" className ="form" onSubmit={handleSubmit}>
                    Address: <input id="editAddressField"
                         type="text"
                         name="address"
@@ -60,11 +60,11 @@ export default function Details() {
                     />
                     <button className="form-submit updateButton">Update</button>
                 </form>}
-                {details.previewDisplay && 
+                {(details.previewDisplay || props.preview )&& 
                         <div id="detailsDiv">
                                 <div id="detailsHeadingDiv">
                                     <h2 id="detailsHeading">DETAILS</h2>
-                                    <img src={editIcon} alt="Edit" className="editButton" id="editDetailsButton" onClick={handleEdit}/>
+                                    {!props.preview &&  <img src={editIcon} alt="Edit" className="editButton" id="editDetailsButton" onClick={handleEdit}/>}
                                 </div>
                                 <p className="bold" id="addressHeading">ADDRESS</p>
                                 <p id="address">{(details.address) ?  details.address : "123 Example Avenue"}</p>

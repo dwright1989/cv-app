@@ -6,7 +6,7 @@ import deleteIcon from '../Icons/delete.png';
 
 
 
-export default function Education() {
+export default function Education(props) {
     const [education, setEducation] = React.useState({
         ed: {
             id: uniqid(),
@@ -67,9 +67,9 @@ export default function Education() {
             <div id="educations">
                 <div id="educationsHeadingDiv">
                     <h2 className="underline">Education</h2>
-                    <img src={addIcon} alt="Add" className="addButton" id="addEducationButton" onClick={handleAdd}/>
+                    {!props.preview && <img src={addIcon} alt="Add" className="addButton" id="addEducationButton" onClick={handleAdd}/>}
                 </div>
-                {education.educations && 
+                {(education.educations || props.preview) &&
                     <div id="educationItems">
                             {education.educations.map((ed)=>{
                                 return <div className="educationItemDiv" key={ed.id}>{
@@ -84,7 +84,7 @@ export default function Education() {
                             })}
                     </div>
                 }
-                {!education.previewDisplay && 
+                {(!education.previewDisplay && !props.preview) &&
                         <form id="educationForm" className ="form" onSubmit={handleSubmit}>
                             School/College: <input id="editSchoolField"
                                 type="text"

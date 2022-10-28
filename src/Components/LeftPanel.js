@@ -4,12 +4,12 @@ import Socials from "./Socials";
 import Skills from "./Skills";
 
 
-const LeftPanel = () => {
+const LeftPanel = (props) => {
   return (
     <div id="leftPanel">
-        <Socials />
-        <Details />
-        <Skills />
+        <Socials preview={props.preview}/>
+        <Details preview={props.preview}/>
+        <Skills preview={props.preview}/>
     </div>
   );
 };

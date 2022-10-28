@@ -4,13 +4,13 @@ import Intro from "./Intro";
 import Education from "./Education";
 import Experience from "./Experience";
 
-const RightPanel = () => {
+const RightPanel = (props) => {
   return (
     <div id="rightPanel">
-        <Header />
-        <Intro />
-        <Education />
-        <Experience />
+        <Header preview={props.preview}/>
+        <Intro preview={props.preview}/>
+        <Education preview={props.preview}/>
+        <Experience preview={props.preview}/>
     </div>
   );
 };

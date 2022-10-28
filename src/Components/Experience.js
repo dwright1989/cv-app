@@ -6,7 +6,7 @@ import deleteIcon from '../Icons/delete.png';
 
 
 
-export default function Experience() {
+export default function Experience(props) {
     const [experience, setExperience] = React.useState({
         work: {
             id: uniqid(),
@@ -69,9 +69,9 @@ export default function Experience() {
             <div id="experiences">
                 <div id="experiencesHeadingDiv">
                     <h2 className="underline">Experience</h2>
-                    <img src={addIcon} alt="Add" className="addButton" id="addExperienceButton" onClick={handleAdd}/>
+                    {!props.preview &&  <img src={addIcon} alt="Add" className="addButton" id="addExperienceButton" onClick={handleAdd}/>}
                 </div>
-                {experience.experiences && 
+                {(experience.experiences || props.preview) && 
                     <div id="experienceItems">
                             {experience.experiences.map((work)=>{
                                 return <div className="experienceItemDiv" key={work.id}>{
@@ -87,7 +87,7 @@ export default function Experience() {
                             })}
                     </div>
                 }
-                {!experience.previewDisplay && 
+                {(!experience.previewDisplay && !props.preview) &&
                         <form id="experienceForm" className ="form" onSubmit={handleSubmit}>
                             Company: <input id="editCompanyField"
                                 type="text"

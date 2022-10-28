@@ -3,7 +3,7 @@ import React from "react";
 import editIcon from '../Icons/edit.png';
 
 
-export default function Intro() {
+export default function Intro(props) {
     const [intro, setIntro] = React.useState({
        description: "",
        previewDisplay: true
@@ -37,7 +37,7 @@ export default function Intro() {
         return (
             
             <div id="intro">
-                {!intro.previewDisplay && <form id="introForm" className ="form" onSubmit={handleSubmit}>
+                {(!intro.previewDisplay && !props.preview) &&<form id="introForm" className ="form" onSubmit={handleSubmit}>
                    Intro: <textarea id="descriptionTextArea"
                         type="text"
                         name="description"
@@ -46,11 +46,11 @@ export default function Intro() {
                     />
                     <button className="form-submit updateButton" id="updateInfoButton">Update</button>
                 </form>}
-                {intro.previewDisplay && 
+                {(intro.previewDisplay || props.preview) &&
                         <div id="introDiv">
                                 <div id="introHeadingDiv">
                                     <h2 id="introHeading" className="underline">Intro</h2>
-                                    <img src={editIcon} alt="Edit" className="editButton" id="editIntroButton" onClick={handleEdit}/>
+                                    {!props.preview && <img src={editIcon} alt="Edit" className="editButton" id="editIntroButton" onClick={handleEdit}/>}
                                 </div>
                                 <p id="description">{(intro.description) ?  intro.description : "This is where you'll put information about yourself, an introduction about background etc."}</p>
                         </div>}
